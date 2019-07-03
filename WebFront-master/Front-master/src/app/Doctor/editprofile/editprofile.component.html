@@ -1,0 +1,68 @@
+<body>
+  <div>
+        <mat-card class="sign">
+          <form class = "form-login" #f="ngForm" (ngSubmit)="logIn(f.value)" [formGroup]="form">
+              <h3>Edit Profile</h3>
+            <br>
+                    <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username and/or password.</div>
+                    <div *ngIf="validLogin" class="alert alert-danger">Login Sucess.</div>
+  
+
+                    <!--Start of form-->
+                    <label for="contactNo">Contact Number</label>
+                    <input
+                     formControlName="contactNo"
+                     type="text"
+                     id="inputcontactNo"
+                     ngModel class="form-control"
+                     placeholder="contactNo">
+                     <div *ngIf = "form.get('contactNo').touched && form.get('contactNo').invalid"class="alert alert-danger">
+                     <span *ngIf="form.hasError('contactNo', 'contactNo')&&form.get('contactNo').touched">
+                       This Contact Number is not valid.
+                      </span>
+                      Enter Conatct Number
+                    </div>
+                    <br>
+
+                    <label for="workAddress">Work Address</label>
+                          <input
+                             formControlName="workAddress"
+                             type="text"
+                             id="inputworkAddress"
+                             ngModel class="form-control"
+                             placeholder="Work Address">
+                             <div *ngIf = "form.get('workAddress').touched && form.get('workAddress').invalid"class="alert alert-danger">
+                             <span *ngIf="form.hasError('workAddress', 'workAddress')&&form.get('workAddress').touched">
+                             Work Address is Not valid
+                            </span>
+                            Enter work Address
+                            </div>
+                          <br>
+  
+                    <label for="doctorDesignation">Doctor Designation</label>
+                      <input
+                         formControlName="doctorDesignation"
+                         type="text"
+                         id="inputdoctorDesignation"
+                         ngModel class="form-control"
+                         placeholder="Doctor Designation">
+                         <div *ngIf = "form.get('doctorDesignation').touched && form.get('doctorDesignation').invalid"class="alert alert-danger">
+                         <span *ngIf="form.hasError('doctorDesignation', 'doctorDesignation')&&form.get('doctorDesignation').touched">
+                         Designation is Not valid
+                        </span>
+                        Enter Designation
+                        </div>
+                      <br>
+  
+                   
+                          
+                            
+  
+              <!--Submit Button-->
+              <button class="btn btn-lg btn-primary btn-block" type="submit" >Save</button>
+               
+          </form>	
+  
+      </mat-card>
+  </div>
+  </body>

@@ -1,0 +1,154 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <div class="panel panel-white profile-widget">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="image-container bg2">  
+                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="avatar" alt="avatar"> 
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="details">
+                        <div>Works at HelloDoc.com</div><br>
+                        <div class="mg-top-10">
+                              <ul class="nav nav-tabs">
+                              <li class="nav-item">
+                                  <button type="button" class="btn btn-secondary p" (click)="moveToUserPage()" >About</button>
+                                  </li>
+                                  &nbsp;   &nbsp;
+                              <li class="nav-item">
+                                  <button type="button" class="btn btn-secondary p" (click)="moveToViewPatient()" >Patient List</button>
+                                  </li>
+
+                                  &nbsp;  &nbsp;
+                                      
+                              
+                              <li class="nav-item">
+                                  <button type="button" class="btn btn-secondary r" (click)="moveToAppointmentList()" >Appointment list</button>    
+                                                           </li>
+
+                                
+                                      
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        
+            
+        
+                
+                <div class="panel panel-white border-top-purple">
+                   <div class="panel-heading">
+                        <section class="search-sec">
+                                <div class="container">
+                                    <form [formGroup]="form" action="#" (ngSubmit)="getPatientData(form)" method="post" novalidate="novalidate">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                                        <input type="text" class="form-control search-slt" [(ngModel)]="email" formControlName="email" placeholder="Enter Patient ID">
+                                                    </div>
+                                                    &nbsp;  &nbsp; 
+                                                    &nbsp;  &nbsp; 
+                                                    
+                                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                                        <button type="button" class="btn btn-danger wrn-btn" (click)="getPatientData(form)">Search</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </section>
+                    </div>
+                    <div class="panel-body"> 
+                            <table class="table table-hover">
+                  
+                                    <tbody>
+                                     
+                                      <tr>
+                                        <th scope="row">Patient ID:</th>
+                                        <td>{{patients.email}}</td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        <th scope="row"> Name:</th>
+                                        <td>{{patients.firstName}}</td>
+                                      </tr>  
+                                      <tr>
+                                        <th scope="row">Address:</th>
+                                        <td>{{patients.addStreet}}</td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Conatct Number:</th>
+                                        <td>{{patients.contactNo}}</td>
+                                      </tr>  
+                                      <tr>
+                                        <th scope="row">Date Of Birth:</th>
+                                        <td>{{patients.dob}}</td>
+                                      </tr>  
+                                      <tr>
+                                        <th scope="row">Occupation:</th>
+                                        <td>{{patients.occupation}}</td>
+                                      </tr>
+                                      <!-- <tr>
+                                        <th scope="row">Marital State:</th>
+                                        <td>{{patients.maritalState}}</td>
+                                      </tr>   -->
+                                      <tr>
+                                        <th scope="row">Blood Group:</th>
+                                        <td>{{patients.bloodType}}</td>
+                                      </tr>  
+                                      <!-- <tr>
+                                        <th scope="row">Blood Suger:</th>
+                                        <td>{{patients.bloodSugar}}</td>
+                                        
+                                      </tr> -->
+                                      <!-- <tr>
+                                        <th scope="row">Blood Presure:</th>
+                                        <td>{{patients.bloodPresure}}</td>
+                                      </tr>    -->
+                        
+                                      <!-- <tr>
+                                          <th scope="row">Social Disease:</th>
+                                          <td>{{patients.socialDisease}}</td>
+                                        </tr>  -->
+                                        
+                                        <tr>
+                                            <th scope="row">Weight:</th>
+                                            <td>{{patients.weight}}</td>
+                                          </tr>   
+                                          <tr>
+                                            <th scope="row">Height:</th>
+                                            <td>{{patients.height}}</td>
+                                          </tr>   
+                        
+                                           
+                        
+                                            
+                                              <!-- <tr>
+                                                <th scope="row">Cholestrol:</th>
+                                                <td>{{patients.cholestrol}}</td>
+                                              </tr> 
+                                              <tr>
+                                                <th scope="row">Allergy:</th>
+                                                <td>{{patients.allergy}}</td>
+                                              </tr>     -->
+                        
+                                    </tbody> <br>
+                                    <button type="button" class="btn btn-secondary" (click)="Addprescription()">Add Prescription</button>
+                        
+                                  </table>
+                                  </div>
+          
+                    
+                
+                 
+                

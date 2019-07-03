@@ -1,0 +1,116 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<div class="container emp-profile">
+    <form method="post">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-img">
+                    <img src="https://cdn.careeronestop.org/OccVids/OccupationVideos/29-2011.00.jpg" alt="" />
+                    <div class="file btn btn-lg btn-primary">
+                        Change Photo
+                        <input type="file" name="file" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="profile-head">
+                    <h5>
+                        Name
+                    </h5>
+                    <h6>
+                        Medical Laboratory Technician
+                    </h6>
+                    
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-secondary q" (click)="moveToAbout()">About</button>
+                        </li>
+
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-secondary p" (click)="moveToPatientSearch()">Patient
+                                Search</button>
+                        </li>
+
+                        
+                    </ul>
+                </div>
+            </div>
+           
+        </div>
+
+</form>
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+
+            <div class="col-md-8">
+                    <form [formGroup]="form" action="#" (ngSubmit)="getPatientData(form)" method="post" novalidate="novalidate">
+                <div class="tab-content profile-tab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                <input type="text" class="form-control search-slt" [(ngModel)]="email" formControlName="email" placeholder="Enter Patient ID">
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                <button type="submit" class="btn btn-danger wrn-btn">Search</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+            </div><br><br><br>
+            <table class="table table-hover">
+
+                <tbody>
+
+                    <tr>
+                        <th scope="row">Patient ID:</th>
+                        <td>{{email}}</td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">Doctor Reg No:</th>
+                        <td>{{doctorRegNo}}</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Prescription ID:</th>
+                        <td>{{prescriptionId}}</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Issue Date:</th>
+                        <td>{{issueDate}}</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Expire Date:</th>
+                        <td>{{expireDate}}</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Recommanded Test:</th>
+                        <td>{{recommandedTest}}</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">Payment(Yes/No)</th>
+                        <td>{{payment}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="col-md-2">
+                <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Uploads reports"/><br>
+
+            </div>
+        </div>
+</div>

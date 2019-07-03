@@ -1,0 +1,121 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!--
+User Profile Sidebar by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+-->
+
+<div class="row" style="margin-top:40px; background-color:#eff0f2;
+-webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+-moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);">
+  <!-- <div class="col-sm-12" style="text-align:center;">
+    Register
+  </div> -->
+
+  <div class="container">
+    <header>
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </header>
+  
+    <div class="row">
+      <div class="left col-lg-4">
+        <div class="photo-left">
+          <img class="photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3ukqZjpdCH43I2JRCWzvNKexVevzEdux3pHkE9NDmKam9hBuk" />
+          <div class="active"></div>
+        </div>
+        <h4 class="name">NAME</h4>
+		<p class="info">Patient ID</p>
+		
+    <p class="desc">There’s nothing worse than being in the hospital and not knowing what’s going on with your own care. So encourage your doctors, nurses and therapists to share information. Even if they don’t know the full story, sharing the information they have that affects the patient can make them instantly more likable.</p>
+    <div class="social">
+          <i class="fa fa-facebook-square" aria-hidden="true"></i>
+          <i class="fa fa-twitter-square" aria-hidden="true"></i>
+          <i class="fa fa-pinterest-square" aria-hidden="true"></i>
+          <i class="fa fa-tumblr-square" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="right col-lg-8">
+        <ul class="nav">
+         
+            <li> <button type="button" class="btn btn-secondary" (click)="moveToBasiPatientHome()">Patient Home</button> </li>
+            <li> <button type="button" class="btn btn-secondary" (click)="moveToBasicHealthInfo()">Basic Health Info</button> </li>
+            <li> <button type="button" class="btn btn-secondary" (click)="moveToMakeAppointment()">Make Appointment</button> </li>
+            <li> <button type="button" class="btn btn-secondary" (click)="moveToLabReports()">Lab Reports </button> </li>
+            <li> <button type="button" class="btn btn-secondary" (click)="moveToPrescription()">Prescription</button> </li>
+            <li> <button type="button" class="btn btn-secondary" (click)="moveToCurrentState()">Current State</button> </li>
+
+        </ul>
+     
+        
+        <div>
+          
+            <br>
+            <table class="table table-hover">
+              
+              <tbody>
+                <tr>
+                  <th scope="row">Name:</th>
+                  <td>{{name}}</td>
+                  
+                </tr>
+                <tr>
+                  <th scope="row">Patient ID:</th>
+                  <td>{{email}}</td>
+                  
+                </tr>
+                <tr>
+                  <th scope="row">NIC:</th>
+                  <td>{{NIC}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Home Address:</th>
+                  <td>{{address}}</td>
+                  
+                </tr>
+                <tr>
+                  <th scope="row">Email:</th>
+                  <td>{{email}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Contact No:</th>
+                  <td>{{contactNo}}</td>
+                  
+                </tr>
+                <tr>
+                  <th scope="row">Occupation:</th>
+                  <td>{{occupation}}</td>
+                </tr>   
+
+                <tr>
+                    <th scope="row">Height:</th>
+                    <td>{{height}}</td>
+                  </tr> 
+                  
+                  <tr>
+                      <th scope="row">Weight:</th>
+                      <td>{{weight}}</td>
+                    </tr>   
+
+                    <tr>
+                        <th scope="row">Marital state:</th>
+                        <td>{{maritalState}}</td>
+                      </tr>   
+
+                      <tr>
+                          <th scope="row">Blood Group:</th>
+                          <td>{{bloodGroup}}</td>
+                        </tr>   
+              </tbody>
+            </table>
+          </div>
+        
+      </div>
+    </div>
+
+
+</div>

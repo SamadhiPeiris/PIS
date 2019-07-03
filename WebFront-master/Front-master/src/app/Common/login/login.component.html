@@ -1,0 +1,80 @@
+<br>
+<br>
+<div>
+    <mat-card class="sign">
+
+
+            <form class = "form-login" #f="ngForm" (ngSubmit)="logIn(f.value)" [formGroup]="form">
+                <mat-card-header>
+              <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+                </mat-card-header><br>
+
+                <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username and/or password.</div>
+                <div *ngIf="validLogin" class="alert alert-danger">Login Sucess.</div>
+              <label for="Email">Email address</label>
+              <input
+                 formControlName="email"
+                 type="email"
+                 id="inputEmail"
+                 ngModel class="form-control"
+                 placeholder="Email address">
+                 <div *ngIf = "form.get('email').touched && form.get('email').invalid"class="alert alert-danger">
+                 <span *ngIf="form.hasError('email', 'email')&&form.get('email').touched">
+                   This email not valid.
+                  </span>
+                  Enter the E-mail
+                </div>
+              <br>
+              <label for="inputPassword">Password</label>
+              <input
+              formControlName="password"
+              type="password"
+              id="inputPassword"
+              ngModel class="form-control"
+              placeholder="Password">
+              <div *ngIf = "form.get('password').touched && form.get('password').invalid" class = "alert alert-danger">
+                Enter the password
+              </div><br>
+
+              <label>
+                <input type="radio" value="005" formControlName="role">
+                  <span>Admin</span>
+              </label>
+              &nbsp; &nbsp;
+              <label>
+                <input type="radio" value="001" formControlName="role">
+                  <span>Doctor</span>
+              </label>
+              &nbsp; &nbsp;
+
+              <label>
+                <input type="radio" value="002" formControlName="role">
+                  <span>Patient</span>
+              </label>
+              &nbsp; &nbsp;
+              <label>
+                <input type="radio" value="004" formControlName="role">
+                  <span>Front-Desk</span>
+              </label>
+              &nbsp; &nbsp;
+              <label>
+                <input type="radio" value="003" formControlName="role">
+                  <span>MLT</span>
+              </label>
+              <br>
+              <br>
+              
+              
+
+
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+             
+            </form>
+
+            <!-- <button (click)="createContact()"></button> -->
+
+
+      </mat-card>
+</div>
+
+

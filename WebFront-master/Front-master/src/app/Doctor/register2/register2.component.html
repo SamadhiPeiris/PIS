@@ -1,0 +1,219 @@
+<body>
+<div>
+    	<mat-card class="sign">
+				<form class = "form-login" #f="ngForm" (ngSubmit)="logIn(f.value)" [formGroup]="form">
+				
+						<mat-card-header>
+								<h1 class="h3 mb-3 font-weight-normal">Login</h1>
+						</mat-card-header><br>
+								  <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username and/or password.</div>
+								  <div *ngIf="validLogin" class="alert alert-danger">Login Sucess.</div>
+
+								  <label for="NIC">NIC</label>
+								  <input
+									 formControlName="NIC"
+									 type="text"
+									 id="inputNIC"
+									 ngModel class="form-control"
+									 placeholder="NIC">
+									 <div *ngIf = "form.get('NIC').touched && form.get('NIC').invalid"class="alert alert-danger">
+									 <span *ngIf="form.hasError('NIC', 'NIC')&&form.get('NIC').touched">
+									   This NIC not valid.
+									  </span>
+									  Enter the NIC
+									</div>
+								  <br>
+
+								  <label for="doctorRegNo">Register Number</label>
+								  <input
+									  formControlName="doctorRegNo"
+									  type="text"
+									  id="doctorRegNo"
+									  ngModel class="form-control"
+									  placeholder="Register Number">
+									  <div *ngIf = "form.get('doctorRegNo').touched && form.get('doctorRegNo').invalid"class="alert alert-danger">
+											<span *ngIf="form.hasError('doctorRegNo', 'doctorRegNo')&&form.get('doctorRegNo').touched">
+											  Register Number Not Valid
+											 </span>
+											 Enter Register No.
+										   </div>
+								   <br>
+
+								   <label for="doctorDesignation">Designation</label>
+								   <input
+									   formControlName="doctorDesignation"
+									   type="text"
+									   id="doctorDesignation"
+									   ngModel class="form-control"
+									   placeholder="Designation">
+									<br>
+									<div *ngIf = "form.get('doctorDesignation').touched && form.get('doctorDesignation').invalid"class="alert alert-danger">
+											<span *ngIf="form.hasError('doctorDesignation', 'doctorDesignation')&&form.get('doctorDesignation').touched">
+											 Designation Not Valid
+											 </span>
+											 Designation Register No.
+										   </div>
+
+									<label for="workAddress">Work Address</label>
+									<input
+										formControlName="workAddress"
+										type="text"
+										id="workAddress"
+										ngModel class="form-control"
+										placeholder="Designation">
+									 <br>
+									 <div *ngIf = "form.get('workAddress').touched && form.get('workAddress').invalid"class="alert alert-danger">
+											<span *ngIf="form.hasError('workAddress', 'workAddress')&&form.get('workAddress').touched">
+											 Work Address Not Valid
+											 </span>
+											 Work Address Register No.
+										   </div>
+
+										   <label for="doctorField">Doctor Field</label>
+										   <input
+											   formControlName="doctorField"
+											   type="text"
+											   id="doctorField"
+											   ngModel class="form-control"
+											   placeholder="Designation">
+											<br>
+											<div *ngIf = "form.get('workAddress').touched && form.get('workAddress').invalid"class="alert alert-danger">
+												   <span *ngIf="form.hasError('workAddress', 'workAddress')&&form.get('workAddress').touched">
+													Work Address Not Valid
+													</span>
+													Work Address Register No.
+												  </div>
+
+
+								  <label for="firstName">First Name</label>
+										<input
+										   formControlName="firstName"
+										   type="text"
+										   id="inputfirstName"
+										   ngModel class="form-control"
+										   placeholder="First Name">
+										   <div *ngIf = "form.get('firstName').touched && form.get('firstName').invalid"class="alert alert-danger">
+										   <span *ngIf="form.hasError('firstName', 'firstName')&&form.get('firstName').touched">
+											 Not valid
+											</span>
+											Enter the First Name
+										  </div>
+										<br>
+
+									<label for="lastName">Last Name </label>
+												<input
+												   formControlName="lastName"
+												   type="text"
+												   id="inputlastName"
+												   ngModel class="form-control"
+												   placeholder="Last Name">
+												   <div *ngIf = "form.get('lastName').touched && form.get('lastName').invalid"class="alert alert-danger">
+												   <span *ngIf="form.hasError('lastName', 'lastName')&&form.get('lastName').touched">
+													 Not valid
+													</span>
+													Enter the Last Name
+												  </div>
+												<br>
+
+												<label for="email">E-mail</label>
+												<input
+												   formControlName="email"
+												   type="email"
+												   id="inputemail"
+												   ngModel class="form-control"
+												   placeholder="E-Mail">
+												   <div *ngIf = "form.get('email').touched && form.get('email').invalid"class="alert alert-danger">
+												   <span *ngIf="form.hasError('email', 'email')&&form.get('email').touched">
+													 Not valid
+													</span>
+													Enter the E-Mail
+												  </div>
+												<br>
+
+												<label for="contactNo">Contact No</label>
+												<input
+												   formControlName="contactNo"
+												   type="contactNo"
+												   id="contactNo"
+												   ngModel class="form-control"
+												   placeholder="contactNo">
+												   <div *ngIf = "form.get('contactNo').touched && form.get('contactNo').invalid"class="alert alert-danger">
+												   <span *ngIf="form.hasError('contactNo', 'contactNo')&&form.get('contactNo').touched">
+													 Not valid
+													</span>
+													Enter the Contact-No
+												  </div>
+												<br>
+
+												<label for="inputPassword">Password</label>
+												<input
+												formControlName="password"
+												type="password"
+												id="inputPassword"
+												ngModel class="form-control"
+												placeholder="Password">
+												<div *ngIf = "form.get('password').touched && form.get('password').invalid" class = "alert alert-danger">
+												  Enter the password
+												</div><br>
+
+												<label for="addNo">Address No</label>
+												<input
+												   formControlName="addNo"
+												   type="text"
+												   id="inputaddNo"
+												   ngModel class="form-control"
+												   placeholder="addNo">
+												<br>
+								
+												<label for="addStreet">Street Name</label>
+												<input
+												   formControlName="addStreet"
+												   type="text"
+												   id="addStreet"
+												   ngModel class="form-control"
+												   placeholder="Add Street">
+												<br>
+
+												
+				<label for="addCity">City Name</label>
+				<input
+					formControlName="addCity"
+					type="text"
+					id="addCity"
+					ngModel class="form-control"
+					placeholder="Add City">
+				 <br>
+
+
+	
+	
+
+	
+
+	
+
+
+	
+				  <!-- <label for="nic">NIC</label>
+				 <input
+					 formControlName="NIC"
+					 type="text"
+					 id="NIC"
+					 ngModel class="form-control"
+					 placeholder="Add City">
+				  <br> -->
+				 
+				  <br>
+				  <br>
+	
+
+
+
+
+						<button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+             
+				</form>	
+
+		</mat-card>
+</div>
+</body>

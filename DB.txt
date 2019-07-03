@@ -1,0 +1,8 @@
+Server: sql12.freemysqlhosting.net
+Name: sql12276123
+Username: sql12276123
+Password: Rkgu11UnRx
+Port number: 3306
+
+chansayumdi@gmail.com
+CHAN11.lk

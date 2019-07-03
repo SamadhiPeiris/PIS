@@ -1,0 +1,113 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <div class="panel panel-white profile-widget">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="image-container bg2">  
+                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="avatar" alt="avatar"> 
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="details">
+                        <div>Works at HelloDoc.com</div><br>
+                        <div class="mg-top-10">
+                              <ul class="nav nav-tabs">
+                              <li class="nav-item">
+                                  <button type="button" class="btn btn-secondary p" (click)="moveToUserPage()" >About</button>
+                                  </li>
+                                  &nbsp;   &nbsp;
+                              <li class="nav-item">
+                                  <button type="button" class="btn btn-secondary p" (click)="moveToViewPatient()" >Patient List</button>
+                                  </li>
+
+                                  &nbsp;  &nbsp;
+                                      
+                              
+                              <li class="nav-item">
+                                  <button type="button" class="btn btn-secondary r" (click)="moveToAppointmentList()" >Appointment list</button>    
+                                                           </li>
+
+                                
+                                      
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        
+            
+        
+                
+                <div class="panel panel-white border-top-purple">
+                   <div class="panel-heading">
+                        <h3 class="panel-title">My Story</h3>
+                        <div class="controls pull-right">
+                            <span class="pull-right clickable">
+                                <i class="fa fa-chevron-up"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="panel-body"> 
+                    
+          
+                            <br>
+                            <table class="table table-hover">
+                              
+                              <tbody>
+                                    <tr>
+                                            <th scope="row">Doctor ID:</th>
+                                            <td>{{email}}</td>
+                                            
+                                          </tr>
+                                <tr>
+                                  <th scope="row">Name:</th>
+                                  <td>{{name}}</td>
+                                  
+                                </tr>
+                               
+                                <tr>
+                                  <th scope="row">NIC:</th>
+                                  <td>{{NIC}}</td>
+                                </tr>
+                                <tr>
+                                        <th scope="row">Work Address:</th>
+                                        <td>{{workAddress}}</td>
+                                      </tr>   
+                
+                                <tr>
+                                  <th scope="row">Email:</th>
+                                  <td>{{email}}</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Contact No:</th>
+                                  <td>{{contactNo}}</td>
+                                  
+                                </tr>
+                                <tr>
+                                  <th scope="row">Doctor Registration Number:</th>
+                                  <td>{{doctorRegNo}}</td>
+                                </tr>   
+                
+                                <tr>
+                                    <th scope="row">Doctor field:</th>
+                                    <td>{{doctorField}}</td>
+                                  </tr> 
+                                  
+                                  <tr>
+                                      <th scope="row">Doctor Designation:</th>
+                                      <td>{{doctorDesignation}}</td>
+                                    </tr>   
+                
+                                    
+                                   
+                              </tbody>
+                            </table>
+                          </div>
+                
+                 
+                

@@ -1,0 +1,66 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Welcome to HelloDoc!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active">Home
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+
+           
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/login']" routerLinkActive="active">Login</a>
+            </li>
+           <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/user']" routerLinkActive="active" (click)="removeToken()">Log Out</a>
+            </li>
+                 
+          
+<!--           
+                       <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/patientprofile']" routerLinkActive="active">Patient Profile</a>
+            </li>
+           
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/search']" routerLinkActive="active">Frontdesk</a>
+            </li>
+           
+                     
+            
+
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/mbasic']" routerLinkActive="active">MLT Profile</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/update']" routerLinkActive="active">Admin</a>
+            </li>
+
+            -->
+
+
+        </ul>
+    </div>
+</nav>
+
+
+<!--<div class="continer-fluid">
+  <div class="row">
+      <div class="col-md-6 offset-md-3">
+          <router-outlet></router-outlet>
+      </div>
+  </div>
+</div> -->
+<router-outlet></router-outlet>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
